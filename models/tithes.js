@@ -11,8 +11,8 @@ module.exports = class Tithes{
 
     static save(tithes){
         return db.execute(
-            'INSERT INTO tbl_tithes (admin_id, member_id, tithes_amount) VALUES(?, ?, ?)',
-            [tithes.admin_id, tithes.member_id, tithes.tithes_amount]
+            'INSERT INTO tbl_tithes (admin_id, member_id, tithes_amount, tithes_date) VALUES(?, ?, ?, ?)',
+            [tithes.admin_id, tithes.member_id, tithes.tithes_amount, tithes.tithes_date]
         );
     }
 

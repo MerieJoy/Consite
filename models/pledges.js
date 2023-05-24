@@ -12,8 +12,8 @@ module.exports = class Pledge{
 
     static save(pledge){
         return db.execute(
-            'INSERT INTO tbl_pledges (admin_id, member_id, pledge_purpose, pledge_amount) VALUES(?, ?, ?, ?)',
-            [pledge.admin_id, pledge.member_id, pledge.pledge_purpose, pledge.pledge_amount]
+            'INSERT INTO tbl_pledges (admin_id, member_id, pledge_purpose, pledge_amount, pledge_date) VALUES(?, ?, ?, ?, ?)',
+            [pledge.admin_id, pledge.member_id, pledge.pledge_purpose, pledge.pledge_amount, pledge.pledge_date]
         );
     }
 

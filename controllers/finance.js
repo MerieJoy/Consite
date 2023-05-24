@@ -50,7 +50,8 @@ exports.saveFinance = async (req, res, next) => {
                 total_pledges: total_pledges,
                 total_expenses: total_expenses,
                 total_budget: total_budget,
-                cash_on_hand: cash_on_hand
+                cash_on_hand: cash_on_hand,
+                finance_date: date
             };
     
             const result = await Finance.save(finance);

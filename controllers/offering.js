@@ -16,10 +16,13 @@ exports.saveOffering = async (req, res, next) => {
     const admin_id = req.body.admin_id;
     const offering_amount = req.body.offering_amount;
 
+    const date = new Date();
+
     try {
         const offering = {
             admin_id: admin_id,
-            offering_amount: offering_amount
+            offering_amount: offering_amount,
+            offering_date: date
         };
 
         const result = await Offering.save(offering);

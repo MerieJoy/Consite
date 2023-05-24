@@ -10,8 +10,8 @@ module.exports = class Offering{
 
     static save(offering){
         return db.execute(
-            'INSERT INTO tbl_offering (admin_id, offering_amount) VALUES(?, ?)',
-            [offering.admin_id, offering.offering_amount]
+            'INSERT INTO tbl_offering (admin_id, offering_amount, offering_date) VALUES(?, ?, ?)',
+            [offering.admin_id, offering.offering_amount, offering.offering_date]
         );
     }
 

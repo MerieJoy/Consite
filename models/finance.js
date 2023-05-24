@@ -15,8 +15,8 @@ module.exports = class Finance{
 
     static save(finance){
         return db.execute(
-            'INSERT INTO tbl_finance (admin_id, total_offering, total_tithes, total_pledges, total_expenses, total_budget, cash_on_hand) VALUES(?, ?, ?, ?, ?, ?, ?)',
-            [finance.admin_id, finance.total_offering, finance.total_tithes, finance.total_pledges, finance.total_expenses, finance.total_budget, finance.cash_on_hand]
+            'INSERT INTO tbl_finance (admin_id, total_offering, total_tithes, total_pledges, total_expenses, total_budget, cash_on_hand, finance_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?)',
+            [finance.admin_id, finance.total_offering, finance.total_tithes, finance.total_pledges, finance.total_expenses, finance.total_budget, finance.cash_on_hand, finance.finance_date]
         );
     }
 

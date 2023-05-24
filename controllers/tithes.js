@@ -18,11 +18,14 @@ exports.saveTithes = async (req, res, next) => {
     const member_id = req.body.member_name;
     const tithes_amount = req.body.tithes_amount;
 
+    const date = new Date();
+
     try {
         const tithes = {
             admin_id: admin_id,
             member_id: member_id,
-            tithes_amount: tithes_amount
+            tithes_amount: tithes_amount,
+            tithes_date: date
         };
 
         const result = await Tithes.save(tithes);

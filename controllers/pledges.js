@@ -19,12 +19,15 @@ exports.savePledge = async (req, res, next) => {
     const pledge_purpose = req.body.pledge_purpose;
     const pledge_amount = req.body.pledge_amount;
 
+    const date = new Date();
+
     try {
         const pledge = {
             admin_id: admin_id,
             member_id: member_id,
             pledge_purpose: pledge_purpose,
-            pledge_amount: pledge_amount
+            pledge_amount: pledge_amount,
+            pledge_date: date
         };
 
         const result = await Pledge.save(pledge);
