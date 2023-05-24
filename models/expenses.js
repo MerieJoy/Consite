@@ -11,8 +11,8 @@ module.exports = class Expenses{
 
     static save(expenses){
         return db.execute(
-            'INSERT INTO tbl_expenses (admin_id, expenses_purpose, expenses_amount) VALUES(?, ?, ?)',
-            [expenses.admin_id, expenses.expenses_purpose, expenses.expenses_amount]
+            'INSERT INTO tbl_expenses (admin_id, expenses_purpose, expenses_amount, expenses_date) VALUES(?, ?, ?, ?)',
+            [expenses.admin_id, expenses.expenses_purpose, expenses.expenses_amount, expenses.expenses_date]
         );
     }
 

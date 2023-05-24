@@ -17,11 +17,14 @@ exports.saveExpenses = async (req, res, next) => {
     const expenses_purpose = req.body.expenses_purpose;
     const expenses_amount = req.body.expenses_amount;
 
+    const date = new Date();
+
     try {
         const expenses = {
             admin_id: admin_id,
             expenses_purpose: expenses_purpose,
-            expenses_amount: expenses_amount
+            expenses_amount: expenses_amount,
+            expenses_date: date
         };
 
         const result = await Expenses.save(expenses);
