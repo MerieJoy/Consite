@@ -70,10 +70,7 @@ exports.postEvent = async (req, res, next) => {
 
         res.status(201).json({ message: 'event successfully created.'});
     } catch (err) {
-        if(!err.statusCode) {
-            err.statusCode = 500;
-        }
-        next(err);
+        res.json({ message: err.message});
     }
 }
 
