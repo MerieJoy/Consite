@@ -1,6 +1,8 @@
 {
-    "host": "localhost",
-    "user": "root",
-    "database": "condb",
-    "password": ""
+    "host": "sql9.freesqldatabase.com",
+    "user": "sql9620730",
+    "password": "8uUK1TN2s1",
+    "database": "sql9620730",
+    "port": "3306"
+    
 }
